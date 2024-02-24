@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{supplier_code}",
  "creation": "2024-02-24 19:55:35.860057",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -13,7 +14,10 @@
   {
    "fieldname": "supplier_code",
    "fieldtype": "Data",
-   "label": "Supplier Code"
+   "in_list_view": 1,
+   "label": "Supplier Code",
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "supplier_name",
@@ -29,10 +33,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-24 19:58:54.322345",
+ "modified": "2024-02-24 20:35:15.291867",
  "modified_by": "Administrator",
  "module": "Samb Test",
  "name": "Supplier",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

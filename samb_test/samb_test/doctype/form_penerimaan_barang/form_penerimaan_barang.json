@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:FPB-{supplier}-{transaction_date}-{####}",
  "creation": "2024-02-24 20:04:20.621292",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,25 +10,31 @@
   "transaction_date",
   "supplier_warehouse",
   "notes",
-  "penerimaan_barang_detail"
+  "penerimaan_barang_detail_table",
+  "amended_from"
  ],
  "fields": [
   {
    "fieldname": "supplier",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Supplier",
-   "options": "Supplier"
+   "options": "Supplier",
+   "reqd": 1
   },
   {
    "fieldname": "transaction_date",
-   "fieldtype": "Datetime",
-   "label": "Transaction Date"
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Transaction Date",
+   "reqd": 1
   },
   {
    "fetch_from": "supplier.supplier_warehouse",
    "fieldname": "supplier_warehouse",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Supplier Warehouse",
+   "options": "Warehouse",
    "read_only": 1
   },
   {
@@ -36,18 +43,30 @@
    "label": "Notes"
   },
   {
-   "fieldname": "penerimaan_barang_detail",
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Form Penerimaan Barang",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "penerimaan_barang_detail_table",
    "fieldtype": "Table",
    "label": "Penerimaan Barang Detail",
    "options": "Penerimaan Barang Detail"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-02-24 20:16:58.672707",
+ "modified": "2024-02-24 22:06:48.606311",
  "modified_by": "Administrator",
  "module": "Samb Test",
  "name": "Form Penerimaan Barang",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

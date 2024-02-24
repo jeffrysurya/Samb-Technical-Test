@@ -7,8 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "item_code",
-  "item_name",
-  "stock_on_warehouse"
+  "item_name"
  ],
  "fields": [
   {
@@ -23,16 +22,11 @@
    "fieldname": "item_name",
    "fieldtype": "Data",
    "label": "Item Name"
-  },
-  {
-   "fieldname": "stock_on_warehouse",
-   "fieldtype": "Float",
-   "label": "Stock On Warehouse"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-24 20:19:08.860900",
+ "modified": "2024-02-24 20:27:12.477077",
  "modified_by": "Administrator",
  "module": "Samb Test",
  "name": "Item",

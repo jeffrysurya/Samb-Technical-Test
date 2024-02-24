@@ -1,13 +1,12 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-02-24 20:11:55.110018",
+ "creation": "2024-02-24 21:03:15.587369",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "item_code",
-  "item_name",
   "qty_dus",
   "qty_pcs"
  ],
@@ -18,14 +17,6 @@
    "in_list_view": 1,
    "label": "Item Code",
    "options": "Item",
-   "reqd": 1
-  },
-  {
-   "fetch_from": "item_code.item_name",
-   "fieldname": "item_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Item Name",
    "read_only": 1
   },
   {
@@ -33,25 +24,23 @@
    "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Qty (Dus)",
-   "non_negative": 1,
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "qty_pcs",
    "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Qty (Pcs)",
-   "non_negative": 1,
-   "reqd": 1
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-02-24 22:09:43.819297",
+ "modified": "2024-02-24 21:05:01.256137",
  "modified_by": "Administrator",
  "module": "Samb Test",
- "name": "Penerimaan Barang Detail",
+ "name": "Warehouse Stock Detail",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

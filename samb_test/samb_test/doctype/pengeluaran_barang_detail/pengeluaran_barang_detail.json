@@ -1,23 +1,55 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-02-24 19:49:44.594804",
+ "creation": "2024-02-24 22:08:08.995836",
+ "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "section_break_2bfe"
+  "item_code",
+  "item_name",
+  "qty_dus",
+  "qty_pcs"
  ],
  "fields": [
   {
-   "fieldname": "section_break_2bfe",
-   "fieldtype": "Section Break"
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "qty_dus",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty (Dus)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "qty_pcs",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty (Pcs)",
+   "non_negative": 1,
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-02-24 19:49:44.594804",
+ "modified": "2024-02-24 22:09:51.007719",
  "modified_by": "Administrator",
  "module": "Samb Test",
  "name": "Pengeluaran Barang Detail",

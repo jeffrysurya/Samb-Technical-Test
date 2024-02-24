@@ -1,17 +1,39 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-02-24 19:32:02.552095",
+ "autoname": "format:FPB-{supplier}-{transaction_date}-{####}",
+ "creation": "2024-02-24 22:13:11.020236",
+ "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_3jxk",
+  "customer",
+  "supplier",
+  "supplier_warehouse",
+  "transaction_date",
+  "notes",
+  "pengeluaran_barang_detail_table",
   "amended_from"
  ],
  "fields": [
   {
-   "fieldname": "section_break_3jxk",
-   "fieldtype": "Section Break"
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Transaction Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
   },
   {
    "fieldname": "amended_from",
@@ -22,15 +44,49 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Form Pengeluaran Barang",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "pengeluaran_barang_detail_table",
+   "fieldtype": "Table",
+   "label": "Pengeluaran Barang Detail",
+   "options": "Pengeluaran Barang Detail",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "supplier.supplier_warehouse",
+   "fieldname": "supplier_warehouse",
+   "fieldtype": "Link",
+   "label": "Supplier Warehouse",
+   "options": "Warehouse",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-02-24 19:37:31.613550",
+ "modified": "2024-02-24 22:16:43.310616",
  "modified_by": "Administrator",
  "module": "Samb Test",
  "name": "Form Pengeluaran Barang",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -43,12 +99,10 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
-   "submit": 1,
    "write": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+ "states": []
 }

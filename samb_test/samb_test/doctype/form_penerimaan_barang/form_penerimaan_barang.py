@@ -1,9 +1,19 @@
 # Copyright (c) 2024, JSD and contributors
 # For license information, please see license.txt
 
-# import frappe
+import frappe
 from frappe.model.document import Document
+from samb_test.utils import handle_stock_update
 
 
 class FormPenerimaanBarang(Document):
-	pass
+	def on_submit(self):
+		self.update_stock(method="stock_in")
+	def on_cancel(self):
+		self.update_stock(method="stock_out")
+
+	def update_stock(self, method):
+		for item in self.penerimaan_barang_detail_table:
+			handle_stock_update(method, self.supplier_warehouse, item)
+
+
