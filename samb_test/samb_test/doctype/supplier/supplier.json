@@ -28,12 +28,13 @@
    "fieldname": "supplier_warehouse",
    "fieldtype": "Link",
    "label": "Supplier Warehouse",
-   "options": "Warehouse"
+   "options": "Warehouse",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-24 20:35:15.291867",
+ "modified": "2024-02-24 23:26:39.636550",
  "modified_by": "Administrator",
  "module": "Samb Test",
  "name": "Supplier",

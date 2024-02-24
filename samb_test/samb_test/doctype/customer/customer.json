@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:CUST-{customer_id}",
  "creation": "2024-02-24 20:03:17.674799",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -12,7 +13,10 @@
   {
    "fieldname": "customer_id",
    "fieldtype": "Data",
-   "label": "Customer ID"
+   "in_list_view": 1,
+   "label": "Customer ID",
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "customer_name",
@@ -22,10 +26,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-24 20:03:37.063417",
+ "modified": "2024-02-24 23:25:34.793816",
  "modified_by": "Administrator",
  "module": "Samb Test",
  "name": "Customer",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
