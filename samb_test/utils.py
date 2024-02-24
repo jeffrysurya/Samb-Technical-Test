@@ -10,11 +10,15 @@ def handle_stock_update(method, warehouse, item):
 				update_stock(warehouse_doc, stock, item, method)
 				stock_not_found = False
 				break
-		if stock_not_found:
+		if stock_not_found and method == "stock_in":
 			append_stock(warehouse_doc, item)
+		elif stock_not_found and method == "stock_out":
+			frappe.throw("Stock not found")
 	# handle for first item
-	elif not warehouse_doc.warehouse_stock_detail_table and method == "stock_in":
+	if not warehouse_doc.warehouse_stock_detail_table and method == "stock_in":
 		append_stock(warehouse_doc, item)
+	if not warehouse_doc.warehouse_stock_detail_table and method == "stock_out":
+		frappe.throw("Stock not found")
 
 def update_stock(warehouse_doc, stock, item, method):
 	if method == "stock_in":
