@@ -1,0 +1,8 @@
+// Copyright (c) 2024, JSD and contributors
+// For license information, please see license.txt
+
+// frappe.ui.form.on("Form Pengeluaran Barang", {
+// 	refresh(frm) {
+
+// 	},
+// });
