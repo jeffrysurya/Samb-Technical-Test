@@ -2,6 +2,6 @@
 
 Samb Technical Test
 
-#### License
+Thank you for give me opportunity to take the test.
 
-mit
+The deployed Project can be visited at [Samb Test](https://frappe.jsd.web.id/)
