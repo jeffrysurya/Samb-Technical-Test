@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:FPB-{supplier}-{transaction_date}-{####}",
+ "autoname": "format:OUT-{supplier}-{transaction_date}-{####}",
  "creation": "2024-02-24 22:13:11.020236",
  "default_view": "List",
  "doctype": "DocType",
@@ -82,7 +82,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-02-24 22:16:43.310616",
+ "modified": "2024-02-24 22:38:17.684635",
  "modified_by": "Administrator",
  "module": "Samb Test",
  "name": "Form Pengeluaran Barang",

@@ -3,12 +3,16 @@ import frappe
 def handle_stock_update(method, warehouse, item):
 
 	warehouse_doc = frappe.get_doc("Warehouse", warehouse)
+	stock_not_found = True
 	if warehouse_doc.warehouse_stock_detail_table:
 		for stock in warehouse_doc.warehouse_stock_detail_table:
 			if stock.item_code == item.item_code:
 				update_stock(warehouse_doc, stock, item, method)
-			else:
-				append_stock(warehouse_doc, item)
+				stock_not_found = False
+				break
+		if stock_not_found:
+			append_stock(warehouse_doc, item)
+	# handle for first item
 	elif not warehouse_doc.warehouse_stock_detail_table and method == "stock_in":
 		append_stock(warehouse_doc, item)
 
